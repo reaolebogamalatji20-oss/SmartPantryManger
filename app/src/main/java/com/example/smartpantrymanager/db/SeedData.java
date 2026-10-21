@@ -19,7 +19,7 @@ class SeedData {
 
         add(db, "Shakshuka",
                 "1. In a pan saute onion and pepper until soft.\n2. Add garlic and spices.\n3. Stir in tomatoes or tomato paste; simmer until thick.\n4. Add eggs, cover and cook for 5-8 minutes.",
-                "Cooking oil|1|tsbp", "Onion|1|piece", "Garlic|1|clove", "Paprika|1|tsp", "Cayenne Pepper|1/4|tsp", "Tomato Paste|2|tbsp", "Eggs|3|piece", "Bread");
+                "Cooking oil|1|tbsp", "Onion|1|piece", "Garlic|1|clove", "Paprika|1|tsp", "Cayenne Pepper|1|tsp", "Tomato Paste|2|tbsp", "Eggs|3|piece", "Bread|2|piece");
 
         add(db, "French Toast",
                 "1. Whisk eggs and milk.\n2. Dip bread slices.\n3. Fry in butter until golden.",
