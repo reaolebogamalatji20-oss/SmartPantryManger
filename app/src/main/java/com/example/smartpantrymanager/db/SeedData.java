@@ -44,11 +44,33 @@ class SeedData {
         add(db, "Lentil Soup",
                 "1. Fry chopped onion, carrot, garlic.\n2. Add lentils and water.\n3. Simmer 30 minutes, season with salt.",
                 "lentils|200|g", "carrot|2|piece", "onion|1|piece", "garlic|2|clove", "water|1|l", "salt|1|tsp");
+
+        add(db, "Scrambled Eggs on Toast",
+                "1. Toast the bread.\n2. Melt butter, add whisked eggs and salt.\n3. Stir gently until just set and serve on toast.",
+                "egg|2|piece", "bread|2|piece", "butter|10|g", "salt|1|tsp");
+
+        add(db, "Garlic Butter Pasta",
+                "1. Boil pasta in salted water.\n2. Melt butter with crushed garlic.\n3. Toss drained pasta in the garlic butter.",
+                "pasta|200|g", "garlic|2|piece", "butter|30|g", "salt|1|tsp");
+
+        add(db, "Simple Tomato Pasta",
+                "1. Boil the pasta.\n2. Fry onion and garlic in olive oil.\n3. Add chopped tomatoes and simmer 15 minutes.\n4. Mix with pasta.",
+                "pasta|200|g", "tomato|4|piece", "onion|1|piece", "garlic|2|piece", "olive oil|2|tbsp");
+
+        add(db, "Baked Potato with Cheese",
+                "1. Prick the potatoes and bake at 200C for 60 minutes.\n2. Split open, add butter and grated cheese.",
+                "potato|2|piece", "cheese|60|g", "butter|10|g");
+
+        add(db, "Mashed Potatoes",
+                "1. Peel and boil potatoes until soft.\n2. Drain and mash with butter and warm milk.\n3. Season with salt.",
+                "potato|4|piece", "butter|30|g", "milk|100|ml", "salt|1|tsp");
+
+        add(db, "Tuna Pasta Salad",
+                "1. Cook and cool the pasta.\n2. Drain the tuna and dice tomatoes.\n3. Toss everything with olive oil.",
+                "tuna|1|piece", "pasta|150|g", "tomato|2|piece", "olive oil|1|tbsp");
     }
 
-    /**
-     * Inserts one recipe plus its ingredient rows.
-     */
+    /**Inserts one recipe plus its ingredient rows.*/
     private static void add(SQLiteDatabase db, String name, String steps, String... ingredients) {
         ContentValues rv = new ContentValues();
         rv.put("name", name);
