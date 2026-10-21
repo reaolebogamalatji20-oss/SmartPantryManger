@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SmartPantryManager</string>
+    <string name="settings_highlight_expiring">Highlight items expiring within 3 days</string>
 </resources>
