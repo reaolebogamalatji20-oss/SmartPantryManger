@@ -28,7 +28,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.setForeignKeyConstraintsEnabled(true); // so deleting a recipe cascades to its ingredients
     }
 
-    /** Runs ONCE, the first time the database file is created = "first run". */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE pantry (" +
@@ -62,14 +61,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // ---------------------------------------------------------------- PANTRY CRUD
+    //---- PANTRY CRUD
 
     private ContentValues toValues(PantryItem item) {
         ContentValues v = new ContentValues();
         v.put("name", item.getName());
         v.put("quantity", item.getQuantity());
         v.put("unit", item.getUnit());
-        v.put("expiry_date", item.getExpiryDate()); // null is stored as NULL
+        v.put("expiry_date", item.getExpiryDate());
         return v;
     }
 
@@ -116,7 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         getWritableDatabase().delete("pantry", "id = ?", new String[]{String.valueOf(id)});
     }
 
-    // ---------------------------------------------------------------- RECIPES (read-only)
+    // -------- RECIPES (read-only)
 
     public List<Recipe> getAllRecipesWithIngredients() {
         List<Recipe> recipes = new ArrayList<>();
