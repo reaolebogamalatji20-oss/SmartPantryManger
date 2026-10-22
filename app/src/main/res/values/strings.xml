@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">SmartPantryManager</string>
-    <string name="settings_highlight_expiring">Highlight items expiring within 3 days</string>
+    <string name="app_name">Smart Pantry Manager</string>
+
+    <!-- Add these missing settings strings -->
+    <string name="settings_title">App Settings</string>
+    <string name="enable_expiring_alerts">Enable Expiring-Soon Alerts</string>
+    <string name="preferred_units_title">Preferred Measurement Units</string>
+    <string name="metric_option">Metric (grams, ml, pieces)</string>
+    <string name="imperial_option">Imperial (oz, cups, lbs)</string>
+    <string name="save_settings_button">Save Settings</string>
 </resources>

@@ -3,11 +3,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F9F9F9">
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/swExpiry"
+    <!-- Screen Title -->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/settings_highlight_expiring" />
+        android:text="@string/settings_title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:paddingBottom="16dp"/>
+
+    <!-- Toggle for Expiring-Soon Alerts using SwitchCompat -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchExpiringAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_expiring_alerts"
+        android:textSize="16sp"
+        android:paddingVertical="12dp"
+        android:checked="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginVertical="8dp"/>
+
+    <!-- Unit Preference Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/preferred_units_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:paddingTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radioMetric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/metric_option"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioImperial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imperial_option" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginVertical="16dp"/>
+
+    <!-- Save Settings Button -->
+    <Button
+        android:id="@+id/btnSaveSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_settings_button"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"/>
+
 </LinearLayout>
