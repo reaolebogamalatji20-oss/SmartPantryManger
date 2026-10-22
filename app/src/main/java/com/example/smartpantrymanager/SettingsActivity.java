@@ -20,7 +20,7 @@ public class SettingsActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         SharedPreferences prefs = getSharedPreferences(PREFS, MODE_PRIVATE);
-        SwitchMaterial sw = findViewById(R.id.swExpiry);
+        SwitchMaterial sw = findViewById(R.id.switchExpiringAlerts);
         sw.setChecked(prefs.getBoolean(KEY_HIGHLIGHT_EXPIRING, true));
 
         // Save immediately whenever the switch is toggled
